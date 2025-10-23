@@ -16,3 +16,6 @@
 
 // custom views
 #include "tools/views.hpp"
+
+// custom algorithms
+#include "tools/apply_permutation.hpp"
