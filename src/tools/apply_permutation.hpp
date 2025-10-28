@@ -13,8 +13,14 @@ namespace tools {
    *
    *  This code was adopted from the boost algorithm library.
    *
-   *  Note: the range of indices is modified as well so this range cannot
-   *        be reused.
+   *  This function applies a permutation to a given range using permutation
+   *  indices from another range. The size of both ranges is assumed to be the
+   *  same (no check is performed to this effect) and the value type of the
+   *  permutation range should be the difference type of the range to be
+   *  permuted (there is no check to this effect either).
+   *
+   *  The permutation range is modified by this function so this range cannot
+   *  be reused.
    *
    *  @param[in] begin    the iterator to the start of the range
    *  @param[in] end      the iterator to the end of the range
@@ -46,8 +52,14 @@ namespace tools {
    *
    *  This code was adopted from the boost algorithm library.
    *
-   *  Note: the range of indices is modified as well so this range cannot
-   *        be reused.
+   *  This function applies a permutation to a given range using permutation
+   *  indices from another range. The size of both ranges is assumed to be the
+   *  same (no check is performed to this effect) and the value type of the
+   *  permutation range should be the difference type of the range to be
+   *  permuted (there is no check to this effect either).
+   *
+   *  The permutation range is modified by this function so this range cannot
+   *  be reused.
    *
    *  @param[in] values    the range of values
    *  @param[in] indices   the permutation range
