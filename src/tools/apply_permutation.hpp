@@ -19,6 +19,19 @@ namespace tools {
    *  permutation range should be the difference type of the range to be
    *  permuted (there is no check to this effect either).
    *
+   *  The permutation indices also need to follow a few rules: they need to be
+   *  within 0 and the size of the range to be permutated, and each value can
+   *  only appear once. For example, to generate a permutation range based on
+   *  the order of another vector, we can use this code snippet:
+   *
+   *     std::vector< std::size_t > order( vector.size() );
+   *     std::iota( order.begin(), order.end(), 0 );
+   *     std::sort( order.begin(), order.end(),
+   *                [&] ( auto&& i, auto&& j )
+   *                    { return vector[i] < vector[j]; } );
+   *
+   *  The resulting permutation order follows all the rules given above.
+   *
    *  The permutation range is modified by this function so this range cannot
    *  be reused.
    *
@@ -57,6 +70,19 @@ namespace tools {
    *  same (no check is performed to this effect) and the value type of the
    *  permutation range should be the difference type of the range to be
    *  permuted (there is no check to this effect either).
+   *
+   *  The permutation indices also need to follow a few rules: they need to be
+   *  within 0 and the size of the range to be permutated, and each value can
+   *  only appear once. For example, to generate a permutation range based on
+   *  the order of another vector, we can use this code snippet:
+   *
+   *     std::vector< std::size_t > order( vector.size() );
+   *     std::iota( order.begin(), order.end(), 0 );
+   *     std::sort( order.begin(), order.end(),
+   *                [&] ( auto&& i, auto&& j )
+   *                    { return vector[i] < vector[j]; } );
+   *
+   *  The resulting permutation order follows all the rules given above.
    *
    *  The permutation range is modified by this function so this range cannot
    *  be reused.
