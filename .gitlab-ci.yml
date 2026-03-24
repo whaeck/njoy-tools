@@ -28,6 +28,7 @@ trigger_ci_downstream:
     MERGE_TYPE: $CI_PIPELINE_SOURCE
     PARENT_MR_ID: "$CI_MERGE_REQUEST_IID"
     PROJECT_ROOT_NAME: "Tools"
+    PROJECT_LIB_NAME: "tools"
 
 check:
   stage: check_ok
