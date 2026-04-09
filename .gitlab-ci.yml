@@ -21,7 +21,7 @@ trigger_ci_downstream:
 
   trigger:
     project: NJOY/common_ci
-    branch: xdiv_deploy
+    branch: main
     strategy: depend
 
   variables:
@@ -29,6 +29,7 @@ trigger_ci_downstream:
     PARENT_MR_ID: "$CI_MERGE_REQUEST_IID"
     PROJECT_ROOT_NAME: "Tools"
     PROJECT_LIB_NAME: "tools"
+    PROJECT_TEST_OPTION: "tools.test"
 
 check:
   stage: check_ok
