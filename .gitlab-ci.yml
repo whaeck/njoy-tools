@@ -4,10 +4,6 @@ stages:
 
 trigger_ci_downstream:
   stage: ci_downstream
-  tags:
-    - wrs
-    - AVX2
-
 
   rules:
     - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
