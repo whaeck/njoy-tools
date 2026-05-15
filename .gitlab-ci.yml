@@ -4,6 +4,10 @@ stages:
 
 trigger_ci_downstream:
   stage: ci_downstream
+  tags:
+    - wrs
+    - AVX2
+
 
   rules:
     - if: '$CI_PIPELINE_SOURCE == "merge_request_event"'
@@ -33,6 +37,10 @@ trigger_ci_downstream:
 
 check:
   stage: check_ok
+  tags:
+    - wrs
+    - AVX2
+
   script:
     - printenv
     - echo "Looks good..."
