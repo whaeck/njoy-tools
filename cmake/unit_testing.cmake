@@ -164,3 +164,5 @@ add_cpp_test( views.AnyView     views/AnyView.test.cpp )
 add_cpp_test( split split.test.cpp )
 
 add_cpp_test( apply_permutation apply_permutation.test.cpp )
+
+add_cpp_test( Configuration Configuration.test.cpp )
