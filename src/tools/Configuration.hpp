@@ -4,7 +4,6 @@
 // system includes
 #include <fstream>
 #include <map>
-#include <optional>
 #include <string>
 
 // other includes
@@ -26,7 +25,7 @@ namespace tools {
     /* fields */
 
     std::map< std::string, std::string > properties_;
-    std::optional< std::string > filename_;
+    std::string filename_;
 
     /* auxiliary functions */
 
@@ -99,7 +98,7 @@ namespace tools {
     /**
      *  @brief Private constructor
      */
-    Configuration() : properties_(), filename_( std::nullopt ) {}
+    Configuration() : properties_(), filename_() {}
 
     /**
      *  @brief Private destructor
@@ -136,7 +135,7 @@ namespace tools {
     /**
      *  @brief Get filename of the configuration file that has been loaded
      */
-    const std::optional< std::string >& filename() const {
+    const std::string& filename() const {
 
       return this->filename_;
     }
